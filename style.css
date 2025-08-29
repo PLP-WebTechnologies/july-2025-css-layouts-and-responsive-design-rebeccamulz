@@ -1,0 +1,73 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+/* Header with Flexbox */
+header {
+  background: #333;
+  color: white;
+  padding: 10px;
+}
+
+nav ul {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Grid for main layout */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+/* Cards with Flexbox */
+.cards {
+  display: flex;
+  gap: 10px;
+}
+
+.card {
+  flex: 1;
+  background: lightgray;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* stack sidebar and content */
+  }
+
+  .cards {
+    flex-direction: column; /* stack cards */
+  }
+
+  nav ul {
+    flex-direction: column; /* stack nav links */
+  }
+}
